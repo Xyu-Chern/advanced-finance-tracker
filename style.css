@@ -523,15 +523,25 @@ body.theme-light .bg-gradient {
 
 /* new version */
 body.theme-light {
-  --bg: #f1f5f9;
+  --bg: #f8fafc;
   --bg-accent: rgba(255, 255, 255, 0.4);
-  --card: rgba(255, 255, 255, 0.7);
-  --card-strong: rgba(255, 255, 255, 0.9);
+  --card: rgba(255, 255, 255, 0.8);
+  --card-strong: rgba(255, 255, 255, 0.95);
   --text: #1e293b;
-  --muted: #475569;
-  --border: rgba(15, 23, 42, 0.08);
-  --primary: #2563eb;
-  --shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  --muted: #64748b;
+  --border: rgba(15, 23, 42, 0.06);
+  --primary: #0ea5e9;
+  --shadow: 0 20px 40px rgba(14, 165, 233, 0.1);
+}
+
+body.theme-light .transaction {
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: 1px solid rgba(15, 23, 42, 0.05) !important;
+  color: #1e293b !important;
+}
+
+body.theme-light .transaction:hover {
+  background: rgba(255, 255, 255, 0.8) !important;
 }
 
 body.theme-light #financeChart {
@@ -562,10 +572,11 @@ body.theme-light option {
 body.theme-light .bg-gradient {
   background: linear-gradient(
     135deg,
-    rgba(203, 213, 225, 0.4),
-    rgba(241, 245, 249, 0.4)
+    rgba(14, 165, 233, 0.1),
+    rgba(124, 58, 237, 0.05)
   );
 }
+/* new version */
 
 @media (max-width: 900px) {
   body {
