@@ -500,8 +500,8 @@ body {
     opacity: 1;
   }
 }
-
-body.theme-light {
+/* prev version */
+/* body.theme-light {
   --bg: #f8fafc;
   --bg-accent: #e2e8f0;
   --card: rgba(15, 23, 42, 0.04);
@@ -518,6 +518,45 @@ body.theme-light .bg-gradient {
     135deg,
     rgba(15, 23, 42, 0.06),
     rgba(29, 78, 216, 0.08)
+  );
+} */
+
+/* new version */
+body.theme-light {
+  --bg: #f8fafc;
+  --bg-accent: #f1f5f9;
+  --card: #ffffff; 
+  --card-strong: #f1f5f9; 
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #cbd5e1;
+  --primary: #0284c7;
+  --shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+}
+
+body.theme-light input, 
+body.theme-light select {
+  color: #0f172a !important; 
+  background: #ffffff !important; 
+  border: 1px solid #cbd5e1 !important;
+}
+
+body.theme-light .badge {
+  background: rgba(2, 132, 199, 0.1);
+  color: #0369a1;
+  border: 1px solid rgba(2, 132, 199, 0.2);
+}
+
+body.theme-light #financeChart {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+}
+
+body.theme-light .bg-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(203, 213, 225, 0.4),
+    rgba(241, 245, 249, 0.4)
   );
 }
 
