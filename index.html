@@ -80,12 +80,14 @@
 
             <label class="form__field">
               <span>Amount</span>
-              <input
+              <!-- prev version <input
                 id="amountInput"
                 type="number"
                 placeholder="e.g., 1200 or -45"
                 required
-              />
+              /> -->
+              <!-- new version -->
+              <input id="amountInput" type="number" step="0.01" placeholder="e.g., 12.00" required />
               <small class="error" id="amountError"></small>
             </label>
 
