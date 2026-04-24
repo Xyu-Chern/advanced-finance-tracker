@@ -213,6 +213,36 @@
 
     <div class="toast-container" id="toastContainer"></div>
 
+
+    <div id="cookieBanner" class="cookie-banner" style="display: none;">
+    <p>We use cookies to ensure you get the best experience on our finance tracker. 
+       By clicking "Accept", you agree to our 
+       <a href="#" style="color: #60a5fa; text-decoration: underline;">Privacy Policy</a>.
+    </p>
+    <button id="acceptCookies" class="btn btn--accent">Accept</button>
+  </div>
+
+  <style>
+    .cookie-banner {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1e293b;
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      z-index: 1000;
+      width: 90%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      border: 1px solid #334155;
+    }
+  </style>
+
     <script src="main.js"></script>
   </body>
 </html>
