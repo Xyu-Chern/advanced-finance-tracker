@@ -69,6 +69,8 @@ const setTheme = (theme) => {
   dom.themeToggleBtn.textContent =
     theme === "light" ? "Dark Mode" : "Light Mode";
   saveTheme();
+  // new add
+  renderApp(); 
 };
 
 const loadTheme = () => {
