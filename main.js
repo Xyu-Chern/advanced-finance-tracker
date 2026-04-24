@@ -214,22 +214,44 @@ const closeConfirmModal = () => {
   dom.confirmModal.setAttribute("aria-hidden", "true");
 };
 
+// prev version
+// const renderSummary = () => {
+//   const amounts = state.transactions.map((tx) => tx.amount);
+
+//   const totalIncome = amounts
+//     .filter((amount) => amount > 0)
+//     .reduce((sum, amount) => sum + amount, 0);
+
+//   const totalExpenses = amounts
+//     .filter((amount) => amount < 0)
+//     .reduce((sum, amount) => sum + amount, 0);
+
+//   const totalBalance = totalIncome + totalExpenses;
+
+//   dom.totalIncome.textContent = formatCurrency(totalIncome);
+//   dom.totalExpenses.textContent = formatCurrency(Math.abs(totalExpenses));
+//   dom.totalBalance.textContent = formatCurrency(totalBalance);
+// };
+
+
+// revise version
 const renderSummary = () => {
-  const amounts = state.transactions.map((tx) => tx.amount);
+  // Convert monetary amounts into integers denominated in "cents" for calculation to avoid IEEE 754 floating-point precision issues.
+  const toCents = (num) => Math.round(num * 100);
+  
+  const totalIncomeCents = state.transactions
+    .filter((tx) => tx.amount > 0)
+    .reduce((sum, tx) => sum + toCents(tx.amount), 0);
 
-  const totalIncome = amounts
-    .filter((amount) => amount > 0)
-    .reduce((sum, amount) => sum + amount, 0);
+  const totalExpensesCents = state.transactions
+    .filter((tx) => tx.amount < 0)
+    .reduce((sum, tx) => sum + Math.abs(toCents(tx.amount)), 0);
 
-  const totalExpenses = amounts
-    .filter((amount) => amount < 0)
-    .reduce((sum, amount) => sum + amount, 0);
+  const balanceCents = totalIncomeCents - totalExpensesCents;
 
-  const totalBalance = totalIncome + totalExpenses;
-
-  dom.totalIncome.textContent = formatCurrency(totalIncome);
-  dom.totalExpenses.textContent = formatCurrency(Math.abs(totalExpenses));
-  dom.totalBalance.textContent = formatCurrency(totalBalance);
+  dom.totalIncome.textContent = formatCurrency(totalIncomeCents / 100);
+  dom.totalExpenses.textContent = formatCurrency(totalExpensesCents / 100);
+  dom.totalBalance.textContent = formatCurrency(balanceCents / 100);
 };
 
 const renderTransactions = () => {
