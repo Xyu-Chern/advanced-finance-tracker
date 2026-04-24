@@ -415,7 +415,8 @@ const renderChart = () => {
     expenseHeight,
   );
 
-  ctx.fillStyle = "#f8f4e9";
+  // ctx.fillStyle = "#f8f4e9";  new_version 
+  ctx.fillStyle = state.theme === "light" ? "#1e293b" : "#f8f4e9";
   ctx.font = "14px sans-serif";
   ctx.fillText("Income", 170, baseY + 20);
   ctx.fillText("Expense", 160 + barWidth + gap, baseY + 20);
