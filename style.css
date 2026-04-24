@@ -522,85 +522,67 @@ body.theme-light .bg-gradient {
 } */
 
 /* new version */
+/* --- 修复版：精准隔离的 Light Mode --- */
+
+/* 1. 基础背景：拒绝纯白，使用柔和的浅蓝灰色 */
 body.theme-light {
-  --bg: #f8fafc;
-  --bg-accent: rgba(255, 255, 255, 0.4);
-  --card: rgba(255, 255, 255, 0.9); 
+  --bg: #f0f4f8; 
+  --bg-accent: #e2e8f0;
+  --card: rgba(255, 255, 255, 0.8);
   --card-strong: #ffffff;
-  --text: #111827; 
-  --muted: #4b5563;
-  --border: #d1d5db;
-  --primary: #0ea5e9;
-  --shadow: 0 20px 40px rgba(14, 165, 233, 0.08);
+  --text: #1e293b;
+  --muted: #64748b;
+  --border: rgba(0, 0, 0, 0.1);
+  --primary: #0284c7;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-body.theme-light,
-body.theme-light .bg-gradient,
-body.theme-light .app {
+body.theme-light, 
+body.theme-light .bg-gradient {
+  background: #f0f4f8 !important;
   background-image: none !important;
-  background-color: #f8fafc !important;
-}
-
-body.theme-light .card {
-  background-color: var(--card) !important;
-  border: 1px solid var(--border) !important;
-  color: var(--text) !important;
-}
-
-body.theme-light .transaction {
-  background: #ffffff !important;
-  border: 1px solid #e5e7eb !important;
-  color: #111827 !important;
-}
-
-body.theme-light .transaction:hover {
-  background: #f1f5f9 !important;
 }
 
 body.theme-light #financeChart {
-  background: #ffffff !important;
-  border: 1px solid #e5e7eb !important;
-  color: #111827 !important;
+  background-color: #ffffff !important;
+  color: #1e293b !important; /* 强制图表文字变黑 */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+select, input {
+  background-color: #1e293b; 
+  color: #ffffff;
+}
+
+body.theme-light select,
+body.theme-light input {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #cbd5e1 !important;
 }
 
 body.theme-light select option {
   background-color: #ffffff !important;
-  color: #111827 !important;
+  color: #1e293b !important;
 }
 
-body.theme-light .app__title,
-body.theme-light .section-title,
-body.theme-light .summary__value,
+body.theme-light .transaction {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #1e293b !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
 body.theme-light .transaction__title,
-body.theme-light .amount--income,
-body.theme-light .amount--expense,
-body.theme-light .month-title {
-  color: #111827 !important;
+body.theme-light .month-title,
+body.theme-light .section-title {
+  color: #1e293b !important;
 }
 
-body.theme-light .app__subtitle,
-body.theme-light .summary__label,
-body.theme-light .form__field span,
-body.theme-light .transaction__meta {
-  color: #4b5563 !important;
-}
-
+/* 5. 解决 Toast 提示框颜色 */
 body.theme-light .toast {
-  background-color: #ffffff !important;
-  color: #111827 !important;
-  border: 1px solid #d1d5db !important;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
-}
-
-body.theme-light .toast--error {
-  border-color: #ef4444 !important;
-  color: #b91c1c !important;
-}
-
-body.theme-light .cookie-banner {
-  background-color: #ffffff !important;
-  color: #111827 !important;
-  border: 1px solid #d1d5db !important;
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #cbd5e1 !important;
 }
 /* new version */
 
