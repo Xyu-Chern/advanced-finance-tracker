@@ -677,6 +677,19 @@ body.theme-light .app__subtitle {
 body.theme-light .section-title {
   color: #000000 !important;
 }
+
+body.theme-light .toast {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.theme-light .cookie-banner {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #cbd5e1 !important;
+}
 /* new version */
 
 @media (max-width: 900px) {
