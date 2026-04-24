@@ -552,4 +552,24 @@ const initializeApp = () => {
   });
 };
 
+// --- new add  Cookie Consent 
+const initCookieBanner = () => {
+  const banner = document.getElementById("cookieBanner");
+  const acceptBtn = document.getElementById("acceptCookies");
+  
+  if (!localStorage.getItem("cookiesAccepted")) {
+    banner.style.display = "flex";
+  }
+  acceptBtn.addEventListener("click", () => {
+    localStorage.setItem("cookiesAccepted", "true");
+    banner.style.display = "none";
+    if (typeof showToast === 'function') {
+      showToast("Privacy preferences saved.");
+    }
+  });
+};
+
+window.addEventListener('DOMContentLoaded', initCookieBanner);
+
+
 initializeApp();
