@@ -523,33 +523,40 @@ body.theme-light .bg-gradient {
 
 /* new version */
 body.theme-light {
-  --bg: #f8fafc;
-  --bg-accent: #f1f5f9;
-  --card: #ffffff; 
-  --card-strong: #f1f5f9; 
-  --text: #0f172a;
+  --bg: #f1f5f9;
+  --bg-accent: rgba(255, 255, 255, 0.4);
+  --card: rgba(255, 255, 255, 0.7);
+  --card-strong: rgba(255, 255, 255, 0.9);
+  --text: #1e293b;
   --muted: #475569;
-  --border: #cbd5e1;
-  --primary: #0284c7;
-  --shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
-}
-
-body.theme-light input, 
-body.theme-light select {
-  color: #0f172a !important; 
-  background: #ffffff !important; 
-  border: 1px solid #cbd5e1 !important;
-}
-
-body.theme-light .badge {
-  background: rgba(2, 132, 199, 0.1);
-  color: #0369a1;
-  border: 1px solid rgba(2, 132, 199, 0.2);
+  --border: rgba(15, 23, 42, 0.08);
+  --primary: #2563eb;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
 body.theme-light #financeChart {
-  background: #ffffff;
-  border: 1px solid #cbd5e1;
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  color: #1e293b !important;
+}
+
+select, input {
+  background: var(--card-strong) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
+
+option {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+body.theme-light input, 
+body.theme-light select,
+body.theme-light option {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #cbd5e1 !important;
 }
 
 body.theme-light .bg-gradient {
