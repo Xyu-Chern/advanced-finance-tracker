@@ -522,67 +522,67 @@ body.theme-light .bg-gradient {
 } */
 
 /* new version */
-/* --- 修复版：精准隔离的 Light Mode --- */
-
-/* 1. 基础背景：拒绝纯白，使用柔和的浅蓝灰色 */
 body.theme-light {
-  --bg: #f0f4f8; 
-  --bg-accent: #e2e8f0;
+  --bg: #f8fafc;
+  --bg-accent: rgba(255, 255, 255, 0.4);
   --card: rgba(255, 255, 255, 0.8);
-  --card-strong: #ffffff;
+  --card-strong: rgba(255, 255, 255, 0.95);
   --text: #1e293b;
   --muted: #64748b;
-  --border: rgba(0, 0, 0, 0.1);
-  --primary: #0284c7;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-body.theme-light, 
-body.theme-light .bg-gradient {
-  background: #f0f4f8 !important;
-  background-image: none !important;
-}
-
-body.theme-light #financeChart {
-  background-color: #ffffff !important;
-  color: #1e293b !important; /* 强制图表文字变黑 */
-  border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-select, input {
-  background-color: #1e293b; 
-  color: #ffffff;
-}
-
-body.theme-light select,
-body.theme-light input {
-  background-color: #ffffff !important;
-  color: #1e293b !important;
-  border: 1px solid #cbd5e1 !important;
-}
-
-body.theme-light select option {
-  background-color: #ffffff !important;
-  color: #1e293b !important;
+  --border: rgba(15, 23, 42, 0.06);
+  --primary: #0ea5e9;
+  --shadow: 0 20px 40px rgba(14, 165, 233, 0.1);
 }
 
 body.theme-light .transaction {
-  background: rgba(255, 255, 255, 0.9) !important;
-  color: #1e293b !important;
-  border: 1px solid rgba(0, 0, 0, 0.05) !important;
-}
-
-body.theme-light .transaction__title,
-body.theme-light .month-title,
-body.theme-light .section-title {
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: 1px solid rgba(15, 23, 42, 0.05) !important;
   color: #1e293b !important;
 }
 
-/* 5. 解决 Toast 提示框颜色 */
-body.theme-light .toast {
+body.theme-light .transaction:hover {
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.theme-light #financeChart {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  color: #1e293b !important; 
+}
+
+select, input {
+  background: var(--card-strong) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
+
+option {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+body.theme-light input, 
+body.theme-light select,
+body.theme-light option {
   background: #ffffff !important;
   color: #1e293b !important;
   border: 1px solid #cbd5e1 !important;
+}
+
+body.theme-light .bg-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(14, 165, 233, 0.1),
+    rgba(124, 58, 237, 0.05)
+  );
+} 
+
+body.theme-light #resetFiltersBtn,
+body.theme-light #exportCsvBtn {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
 }
 /* new version */
 
