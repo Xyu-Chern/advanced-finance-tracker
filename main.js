@@ -522,13 +522,26 @@ const initializeApp = () => {
     renderTransactions();
   });
 
+  // dom.resetFiltersBtn.addEventListener("click", () => {
+  //   state.filters = { category: "all", type: "all", search: "" };
+  //   dom.filterCategory.value = "all";
+  //   dom.filterType.value = "all";
+  //   dom.searchInput.value = "";
+  //   renderTransactions();
+  // });
+
+  // new version
   dom.resetFiltersBtn.addEventListener("click", () => {
     state.filters = { category: "all", type: "all", search: "" };
     dom.filterCategory.value = "all";
     dom.filterType.value = "all";
     dom.searchInput.value = "";
     renderTransactions();
+    if (typeof showToast === 'function') {
+      showToast("Filters cleared.");
+    }
   });
+  // ......
 
   dom.exportCsvBtn.addEventListener("click", exportToCSV);
 
