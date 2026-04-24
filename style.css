@@ -584,6 +584,21 @@ body.theme-light #exportCsvBtn {
   border: 1px solid #cbd5e1 !important;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
 }
+
+body.theme-light #resetFiltersBtn,
+body.theme-light #exportCsvBtn {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.2s ease;
+}
+
+body.theme-light #resetFiltersBtn:hover,
+body.theme-light #exportCsvBtn:hover {
+  background-color: #f1f5f9 !important;
+  border-color: #94a3b8 !important;
+}
 /* new version */
 
 @media (max-width: 900px) {
