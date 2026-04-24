@@ -523,77 +523,157 @@ body.theme-light .bg-gradient {
 
 /* new version */
 body.theme-light {
+
   --bg: #f8fafc;
+
   --bg-accent: rgba(255, 255, 255, 0.4);
+
   --card: rgba(255, 255, 255, 0.8);
+
   --card-strong: rgba(255, 255, 255, 0.95);
+
   --text: #1e293b;
+
   --muted: #64748b;
+
   --border: rgba(15, 23, 42, 0.06);
+
   --primary: #0ea5e9;
+
   --shadow: 0 20px 40px rgba(14, 165, 233, 0.1);
+
 }
 
-body.theme-light {
-  background: var(--bg) !important;
-}
+
 
 body.theme-light .transaction {
+
   background: rgba(255, 255, 255, 0.6) !important;
+
   border: 1px solid rgba(15, 23, 42, 0.05) !important;
+
   color: #1e293b !important;
+
 }
+
+
 
 body.theme-light .transaction:hover {
+
   background: rgba(255, 255, 255, 0.8) !important;
+
 }
+
+
 
 body.theme-light #financeChart {
+
   background: rgba(255, 255, 255, 0.5) !important;
+
   border: 1px solid rgba(15, 23, 42, 0.1);
+
+  color: #1e293b !important; 
+
 }
+
+
 
 select, input {
+
   background: var(--card-strong) !important;
+
   color: var(--text) !important;
+
   border: 1px solid var(--border) !important;
+
 }
+
+
 
 option {
+
   background: #1e293b;
+
   color: #ffffff;
+
 }
+
+
 
 body.theme-light input, 
+
 body.theme-light select,
+
 body.theme-light option {
+
   background: #ffffff !important;
+
   color: #1e293b !important;
+
   border: 1px solid #cbd5e1 !important;
+
 }
+
+
 
 body.theme-light .bg-gradient {
+
   background: linear-gradient(
+
     135deg,
+
     rgba(14, 165, 233, 0.1),
+
     rgba(124, 58, 237, 0.05)
-  ) !important;
+
+  );
+
 } 
 
+
+
 body.theme-light #resetFiltersBtn,
+
 body.theme-light #exportCsvBtn {
+
   background-color: #ffffff !important;
+
   color: #1e293b !important;
+
   border: 1px solid #cbd5e1 !important;
-  font-weight: 700 !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
-  transition: all 0.2s ease;
+
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+
 }
 
+
+
+body.theme-light #resetFiltersBtn,
+
+body.theme-light #exportCsvBtn {
+
+  background-color: #ffffff !important;
+
+  color: #1e293b !important;
+
+  border: 1px solid #cbd5e1 !important;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+
+  transition: all 0.2s ease;
+
+}
+
+
+
 body.theme-light #resetFiltersBtn:hover,
+
 body.theme-light #exportCsvBtn:hover {
+
   background-color: #f1f5f9 !important;
+
   border-color: #94a3b8 !important;
+
 }
 /* new version */
 
